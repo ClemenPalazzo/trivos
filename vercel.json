@@ -8,12 +8,28 @@
     {
       "src": "*.html",
       "use": "@vercel/static"
+    },
+    {
+      "src": "*.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.png",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/send",
-      "dest": "/server.js"
+      "dest": "server.js"
+    },
+    {
+      "src": "/test",
+      "dest": "server.js"
     },
     {
       "src": "/(.*)",

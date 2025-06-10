@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
   if (!form) return;
 
   // Determinar la URL base según el entorno
-  const isDevelopment = window.location.hostname === 'localhost';
-  const baseUrl = isDevelopment ? 'http://localhost:4000' : window.location.origin;
+  const isDevelopment = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+  const baseUrl = isDevelopment ? 'http://localhost:3000' : window.location.origin;
 
   form.addEventListener('submit', function(event) {
     event.preventDefault();
