@@ -9,19 +9,18 @@
 }
 
 header {
-    background-image: url('./img/trivo2.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
     min-height: 100vh;
-    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    background-image: url('/img/trivo2.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
     position: relative;
-    overflow: hidden;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 .containerTituloLogo {
@@ -468,6 +467,7 @@ main {
 }
 
 @media screen and (max-width: 768px) {
+    heder{  padding: 15px;}
     main {
         padding: 15px;
     }
@@ -480,6 +480,7 @@ main {
 }
 
 @media screen and (max-width: 480px) {
+     heder{  padding: 15px;}
     main {
         padding: 10px;
     }
