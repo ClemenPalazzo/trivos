@@ -39,13 +39,13 @@ header {
 
 .titulo {
     color: #FFF9E9;
-    font-size: clamp(32px, 6vw, 80px);
+    font-size: clamp(24px, 4vw, 48px);
     font-family: "Cinzel", serif;
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
-    margin: 20px 0;
-    text-shadow: 0 0 20px rgba(255, 249, 233, 0.6), 0 0 30px rgba(255, 249, 233, 0.4);
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     text-align: center;
     line-height: 1.2;
 }
@@ -71,10 +71,11 @@ header {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-    width: clamp(180px, 45vw, 400px);
-    height: clamp(90px, 22.5vw, 150px);
+    width: clamp(300px, 60vw, 600px);
+    height: clamp(150px, 30vw, 300px);
     border: none;
-    margin: 20px 0;
+    margin-bottom: 20px;
+    object-fit: contain;
 }
 
 .logo img {
