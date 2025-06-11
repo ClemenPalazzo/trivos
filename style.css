@@ -9,7 +9,7 @@
 }
 
 header {
-    background-image: url(img/trivo2.png);
+    background-image: url('./img/trivo2.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -59,7 +59,7 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: url(img/Logo_Trivo_sobre_fondo_rocoso-removebg-preview.png);
+    background-image: url('./img/Logo_Trivo_sobre_fondo_rocoso-removebg-preview.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
