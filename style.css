@@ -21,6 +21,7 @@ header {
     justify-content: center;
     position: relative;
     overflow: hidden;
+    padding: 20px;
 }
 
 .containerTituloLogo {
@@ -31,30 +32,34 @@ header {
     position: relative;
     z-index: 2;
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
 }
 
 .titulo {
     color: #FFF9E9;
-    font-size: clamp(40px, 8vw, 80px);
+    font-size: clamp(32px, 6vw, 80px);
     font-family: "Cinzel", serif;
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
-    margin: 30px 0;
+    margin: 20px 0;
     text-shadow: 0 0 20px rgba(255, 249, 233, 0.6), 0 0 30px rgba(255, 249, 233, 0.4);
     text-align: center;
+    line-height: 1.2;
 }
 
 .subtitulo {
     color: #FFF9E9;
-    font-size: clamp(20px, 4vw, 30px);
+    font-size: clamp(18px, 3.5vw, 30px);
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-style: normal;
     text-align: center;
     margin: 10px 0;
     text-shadow: 0 0 15px rgba(255, 249, 233, 0.6), 0 0 25px rgba(255, 249, 233, 0.4);
+    line-height: 1.4;
 }
 
 .logo {
@@ -66,9 +71,10 @@ header {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-    width: clamp(200px, 50vw, 400px);
-    height: clamp(100px, 25vw, 150px);
+    width: clamp(180px, 45vw, 400px);
+    height: clamp(90px, 22.5vw, 150px);
     border: none;
+    margin: 20px 0;
 }
 
 .logo img {
@@ -77,8 +83,8 @@ header {
 }
 
 .btn-animated {
-    padding: 15px 30px;
-    font-size: 18px;
+    padding: clamp(10px, 2vw, 15px) clamp(20px, 4vw, 30px);
+    font-size: clamp(16px, 3vw, 18px);
     color: white;
     background: linear-gradient(45deg, hsl(33, 98%, 45%), #fb6d15);
     border: none;
@@ -86,8 +92,9 @@ header {
     cursor: pointer;
     position: relative;
     transition: all 0.3s ease;
-    margin-top: 20px;
+    margin: 20px auto;
     box-shadow: 0 0 20px rgba(242, 112, 29, 0.6), 0 0 30px rgba(242, 112, 29, 0.4);
+    white-space: nowrap;
 }
 
 .btn-animated:hover {
@@ -113,39 +120,40 @@ header {
 /* Media Queries para dispositivos móviles */
 @media screen and (max-width: 768px) {
     header {
-        padding: 20px;
+        padding: 15px;
         justify-content: center;
         align-items: center;
         text-align: center;
-        gap: 50px;
+        gap: 30px;
     }
 
     .containerTituloLogo {
-        gap: 20px;
+        gap: 15px;
         padding: 10px;
     }
 
     .logo {
-        width: clamp(200px, 60vw, 300px);
-        height: clamp(100px, 30vw, 150px);
+        width: clamp(160px, 50vw, 300px);
+        height: clamp(80px, 25vw, 150px);
+        margin: 15px 0;
     }
 
     .titulo {
-        font-size: clamp(40px, 10vw, 70px);
-        margin: 20px auto;
-        padding: 0 20px;
+        font-size: clamp(28px, 8vw, 70px);
+        margin: 15px auto;
+        padding: 0 15px;
     }
 
     .subtitulo {
-        font-size: clamp(20px, 5vw, 30px);
-        margin: 15px auto;
-        padding: 0 20px;
+        font-size: clamp(16px, 4vw, 30px);
+        margin: 10px auto;
+        padding: 0 15px;
     }
 
     .btn-animated {
-        padding: 12px 45px;
-        font-size: 1.2rem;
-        margin: 0 auto;
+        padding: 12px 35px;
+        font-size: clamp(14px, 3.5vw, 16px);
+        margin: 15px auto;
     }
 }
 
@@ -165,23 +173,26 @@ header {
     }
 
     .logo {
-        width: clamp(150px, 70vw, 200px);
-        height: clamp(75px, 35vw, 120px);
+        width: clamp(140px, 60vw, 200px);
+        height: clamp(70px, 30vw, 120px);
+        margin: 10px 0;
     }
 
     .titulo {
-        font-size: clamp(30px, 12vw, 50px);
+        font-size: clamp(24px, 10vw, 50px);
         margin: 10px auto;
+        padding: 0 10px;
     }
 
     .subtitulo {
-        font-size: clamp(16px, 6vw, 30px);
-        margin: 10px auto;
+        font-size: clamp(14px, 4.5vw, 30px);
+        margin: 8px auto;
+        padding: 0 10px;
     }
 
     .btn-animated {
-        padding: 10px 35px;
-        font-size: 1rem;
+        padding: 10px 30px;
+        font-size: clamp(13px, 4vw, 16px);
         margin: 10px auto;
     }
 
@@ -218,33 +229,40 @@ header {
     }
 }
 
-/* Ajustes para pantallas muy pequeñas */
+/* Media Queries para pantallas muy pequeñas */
 @media screen and (max-width: 320px) {
     header {
-        gap: 60px;
+        padding: 8px;
+        gap: 15px;
     }
 
     .containerTituloLogo {
-        gap: 10px;
+        gap: 8px;
+        padding: 4px;
     }
 
     .logo {
-        width: 180px;
-        height: 100px;
+        width: clamp(120px, 65vw, 180px);
+        height: clamp(60px, 32.5vw, 100px);
+        margin: 8px 0;
     }
 
     .titulo {
-        font-size: 28px;
-        margin: 10px auto;
+        font-size: clamp(20px, 12vw, 40px);
+        margin: 8px auto;
+        padding: 0 8px;
     }
 
     .subtitulo {
-        font-size: 16px;
-        margin: 10px auto;
+        font-size: clamp(12px, 5vw, 24px);
+        margin: 6px auto;
+        padding: 0 8px;
     }
 
     .btn-animated {
-        margin: 0 auto;
+        padding: 8px 25px;
+        font-size: clamp(12px, 4.5vw, 14px);
+        margin: 8px auto;
     }
 }
 
