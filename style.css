@@ -3,9 +3,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 header {
@@ -13,8 +13,8 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,25 +30,28 @@ header {
     flex-direction: column;
     position: relative;
     z-index: 2;
+    width: 100%;
+    padding: 20px;
 }
 
 .titulo {
     color: #FFF9E9;
-    font-size: 80px;
+    font-size: clamp(40px, 8vw, 80px);
     font-family: "Cinzel", serif;
     font-optical-sizing: auto;
     font-weight: 900;
     font-style: normal;
     margin: 30px 0;
     text-shadow: 0 0 20px rgba(255, 249, 233, 0.6), 0 0 30px rgba(255, 249, 233, 0.4);
+    text-align: center;
 }
 
 .subtitulo {
     color: #FFF9E9;
-    font-size: 30px;
+    font-size: clamp(20px, 4vw, 30px);
     font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+    font-weight: 400;
+    font-style: normal;
     text-align: center;
     margin: 10px 0;
     text-shadow: 0 0 15px rgba(255, 249, 233, 0.6), 0 0 25px rgba(255, 249, 233, 0.4);
@@ -60,11 +63,11 @@ header {
     justify-content: center;
     flex-direction: column;
     background-image: url('./img/Logo_Trivo_sobre_fondo_rocoso-removebg-preview.png');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-    width: 400px;
-    height: 150px;
+    width: clamp(200px, 50vw, 400px);
+    height: clamp(100px, 25vw, 150px);
     border: none;
 }
 
@@ -110,31 +113,31 @@ header {
 /* Media Queries para dispositivos móviles */
 @media screen and (max-width: 768px) {
     header {
-        padding-top: 30px;
+        padding: 20px;
         justify-content: center;
         align-items: center;
         text-align: center;
-        gap: 100px;
-        min-height: 100vh;
+        gap: 50px;
     }
 
     .containerTituloLogo {
         gap: 20px;
+        padding: 10px;
     }
 
     .logo {
-        width: 250px;
-        height: 150px;
+        width: clamp(200px, 60vw, 300px);
+        height: clamp(100px, 30vw, 150px);
     }
 
     .titulo {
-        font-size: 70px;
+        font-size: clamp(40px, 10vw, 70px);
         margin: 20px auto;
         padding: 0 20px;
     }
 
     .subtitulo {
-        font-size: 30px;
+        font-size: clamp(20px, 5vw, 30px);
         margin: 15px auto;
         padding: 0 20px;
     }
@@ -149,39 +152,37 @@ header {
 /* Media Queries específicas para iPhone 12 Pro y similares */
 @media screen and (max-width: 390px) {
     header {
-        padding-top: 5px;
-        justify-content: start;
+        padding: 10px;
+        justify-content: center;
         align-items: center;
         text-align: center;
         gap: 20px;
-        min-height: 100vh;
-        width: 100vw;
-        
     }
 
     .containerTituloLogo {
-        gap: 0px;
+        gap: 10px;
+        padding: 5px;
     }
 
     .logo {
-        width: 200px;
-        height: 120px;
+        width: clamp(150px, 70vw, 200px);
+        height: clamp(75px, 35vw, 120px);
     }
 
     .titulo {
-        margin-top: 120px;
-        font-size: 50px; /* Título más pequeño en responsive */
+        font-size: clamp(30px, 12vw, 50px);
+        margin: 10px auto;
     }
 
     .subtitulo {
-        font-size: 30px;
-        align-self: center;
+        font-size: clamp(16px, 6vw, 30px);
+        margin: 10px auto;
     }
 
     .btn-animated {
-        padding: 15px 45px;
+        padding: 10px 35px;
         font-size: 1rem;
-        margin: 0 auto;
+        margin: 10px auto;
     }
 
     .formContainer {
